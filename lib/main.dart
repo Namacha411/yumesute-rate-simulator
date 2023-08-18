@@ -152,67 +152,69 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "レート: ${_rate?.toStringAsFixed(2)}",
-              style: const TextStyle(fontSize: 24),
-            ),
-            Text(
-              "達成率: ${_percent.toStringAsFixed(2)}",
-              style: const TextStyle(fontSize: 24),
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                labelText: '難易度',
-              ),
-              onChanged: _handleDifficurityValue,
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                labelText: 'PERFECT+',
-              ),
-              onChanged: _handlePerfectPlusValue,
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                labelText: 'PERFECT',
-              ),
-              onChanged: _handlePerfectValue,
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                labelText: 'GREAT',
-              ),
-              onChanged: _handleGreateValue,
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                labelText: 'GOOD',
-              ),
-              onChanged: _handleGoodValue,
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                labelText: 'BAD',
-              ),
-              onChanged: _handleBadValue,
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                labelText: 'MISS',
-              ),
-              onChanged: _handleMissValue,
-            )
-          ],
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text(widget.title),
         ),
-      ),
-    );
+        body: Padding(
+          padding: const EdgeInsets.all(30),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "レート: ${_rate?.toStringAsFixed(2)}",
+                  style: const TextStyle(fontSize: 24),
+                ),
+                Text(
+                  "達成率: ${_percent.toStringAsFixed(2)}",
+                  style: const TextStyle(fontSize: 24),
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                    labelText: '難易度',
+                  ),
+                  onChanged: _handleDifficurityValue,
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                    labelText: 'PERFECT+',
+                  ),
+                  onChanged: _handlePerfectPlusValue,
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                    labelText: 'PERFECT',
+                  ),
+                  onChanged: _handlePerfectValue,
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                    labelText: 'GREAT',
+                  ),
+                  onChanged: _handleGreateValue,
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                    labelText: 'GOOD',
+                  ),
+                  onChanged: _handleGoodValue,
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                    labelText: 'BAD',
+                  ),
+                  onChanged: _handleBadValue,
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                    labelText: 'MISS',
+                  ),
+                  onChanged: _handleMissValue,
+                )
+              ],
+            ),
+          ),
+        ));
   }
 }
